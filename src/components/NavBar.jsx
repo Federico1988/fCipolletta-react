@@ -1,6 +1,7 @@
 import React from 'react'
 import LogoImg from '../img/logo.png'
 import CartImg from '../img/cart.png'
+import CartWidget from './CartWidget'
 import {
   Menu,
   MenuButton,
@@ -14,12 +15,10 @@ import {
 const NavBar = () => {
 
   return (
-
     <div>
-
       <Flex>
         <Box p='4' bg='red.400'>
-          <p>Marca</p>
+          <p>CipoMusic</p>
         </Box>
         <Spacer />
         <Box>
@@ -29,10 +28,13 @@ const NavBar = () => {
             </MenuButton>
             <MenuList>
               <MenuItem>
-                Opcion 1
+                Partituras
               </MenuItem>
               <MenuItem>
-                Opcion 2
+                Audio
+              </MenuItem>
+              <MenuItem>
+                Videos
               </MenuItem>
 
             </MenuList>
@@ -40,11 +42,10 @@ const NavBar = () => {
         </Box>
         <Spacer />
         <Box p='4' bg='green.400'>
-
+          <CartWidget />
         </Box>
       </Flex>
     </div>
-
   )
 }
 

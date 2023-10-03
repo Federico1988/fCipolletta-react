@@ -1,6 +1,7 @@
 import React from 'react'
 import { Badge } from '@chakra-ui/react'
 import cart from '../img/cart.png'
+import { Flex,Box,Divider } from '@chakra-ui/react'
 
 const CartWidget = () => {
   return (
