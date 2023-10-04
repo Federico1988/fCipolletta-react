@@ -1,10 +1,12 @@
+import { Center } from '@chakra-ui/react'
 import React from 'react'
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({ greeting }) => {
   return (
-    <div>
-        <h1>{greeting}</h1>
-    </div>
+    <Center
+      h='calc(100vh)'>
+      <h1>{greeting}</h1>
+    </Center>
   )
 }
 

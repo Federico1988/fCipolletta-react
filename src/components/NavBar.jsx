@@ -18,23 +18,39 @@ const NavBar = () => {
 
   return (
     <Flex>
-      <Box p='4' bg='red.400'>
-        <p>CipoMusic</p>
+      <Box
+        p='4'
+        borderRadius='10px' 
+        bgGradient="linear(to-l, red.200, blue.200)">
+        <h1>CipoMusic</h1>
       </Box>
       <Spacer />
       <Box>
         <Menu>
-          <MenuButton>
+          <MenuButton
+            px={20}
+            py={5}
+            transition='all 0.2s'
+            borderRadius='10px'
+            borderWidth='1px'
+            _hover={{ bg: 'gray.400' }}
+            _expanded={{ bg: 'blue.400' }}
+            _focus={{ boxShadow: 'outline' }}
+            fontSize='4xl'
+          >
             Categorias
           </MenuButton>
           <MenuList>
-            <MenuItem>
+            <MenuItem
+              fontSize='4xl'>
               Partituras
             </MenuItem>
-            <MenuItem>
+            <MenuItem
+              fontSize='4xl'>
               Audio
             </MenuItem>
-            <MenuItem>
+            <MenuItem
+              fontSize='4xl'>
               Videos
             </MenuItem>
 
@@ -42,7 +58,10 @@ const NavBar = () => {
         </Menu>
       </Box>
       <Spacer />
-      <Box p='4' bg='green.400'>
+      <Box
+        p='6'
+        bg='green.400'
+        borderRadius='10px'>
         <CartWidget />
       </Box>
     </Flex>
