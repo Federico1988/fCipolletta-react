@@ -20,7 +20,7 @@ const NavBar = () => {
     <Flex>
       <Box
         p='4'
-        borderRadius='10px' 
+        borderRadius='10px'
         bgGradient="linear(to-l, red.200, blue.200)">
         <h1>CipoMusic</h1>
       </Box>
@@ -32,10 +32,9 @@ const NavBar = () => {
             py={5}
             transition='all 0.2s'
             borderRadius='10px'
-            borderWidth='1px'
+            bg={'gray.100'}
             _hover={{ bg: 'gray.400' }}
-            _expanded={{ bg: 'blue.400' }}
-            _focus={{ boxShadow: 'outline' }}
+            _expanded={{ bg: 'blue.200' }}
             fontSize='4xl'
           >
             Categorias
