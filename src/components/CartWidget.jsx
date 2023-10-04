@@ -1,7 +1,6 @@
 import React from 'react'
 import { Badge } from '@chakra-ui/react'
-import cart from '../img/cart.png'
-import { Flex,Box,Divider } from '@chakra-ui/react'
+import { Flex, Box, Divider } from '@chakra-ui/react'
 
 const CartWidget = () => {
   return (
@@ -14,7 +13,10 @@ const CartWidget = () => {
       </Box>
       <Divider />
       <Box>
-        <Badge colorScheme='green'>8</Badge>
+        <Badge 
+        colorScheme='yellow'
+        fontSize='1xl'
+        >8</Badge>
       </Box>
     </Flex>
 
