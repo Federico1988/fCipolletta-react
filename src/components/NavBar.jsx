@@ -2,6 +2,7 @@ import React from 'react'
 import LogoImg from '../img/logo.png'
 import CartImg from '../img/cart.png'
 import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom';
 
 
 import {
@@ -61,7 +62,9 @@ const NavBar = () => {
         p='6'
         bg='green.400'
         borderRadius='10px'>
-        <CartWidget />
+        <Link to={"/cart"}>
+          <CartWidget />
+        </Link>
       </Box>
     </Flex>
   )
