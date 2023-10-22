@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardBody, Stack, VStack, Heading, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
 
-const Item = ({ id, name}) => {
+const Item = ({ id, name }) => {
     return (
         <Card width='350px' height='300px' align='center' borderRadius='20px' borderWidth='1px' borderColor='gray.300' flex>
             <CardBody>
@@ -16,11 +16,11 @@ const Item = ({ id, name}) => {
             <CardFooter>
                 <VStack>
                     <ButtonGroup spacing='2'>
-                        <Button variant='solid' colorScheme='green' color='yellow.100' >
-                            <Link to={`/product/${id}`}>
+                        <Link to={`/product/${id}`}>
+                            <Button variant='solid' colorScheme='green' color='yellow.100' >
                                 Ver Detalle
-                            </Link>
-                        </Button>
+                            </Button>
+                        </Link>
 
                     </ButtonGroup>
                 </VStack>
