@@ -42,31 +42,30 @@ const NavBar = () => {
             Categorías
           </MenuButton>
           <MenuList>
-            <MenuItem
-              fontSize='2xl'>
-              <Link to={`/`}>
+            <Link to={`/`}>
+              <MenuItem
+                fontSize='2xl'>
                 Todos
-              </Link>
-            </MenuItem>
-            <MenuItem
-              fontSize='2xl'>
-              <Link to={`/category/${'cat1'}`}>
+              </MenuItem>
+            </Link>
+            <Link to={`/category/${'cat1'}`}>
+              <MenuItem
+                fontSize='2xl'>
                 Partituras
-              </Link>
-            </MenuItem>
-            <MenuItem
-              fontSize='2xl'>
-              <Link to={`/category/${'cat2'}`}>
+              </MenuItem>
+            </Link>
+            <Link to={`/category/${'cat2'}`}>
+              <MenuItem
+                fontSize='2xl'>
                 Audios
-              </Link>
-            </MenuItem>
-            <MenuItem
-              fontSize='2xl'>
-              <Link to={`/category/${'cat3'}`}>
+              </MenuItem>
+            </Link>
+            <Link to={`/category/${'cat3'}`}>
+              <MenuItem
+                fontSize='2xl'>
                 Videos
-              </Link>
-            </MenuItem>
-
+              </MenuItem>
+            </Link>
           </MenuList>
         </Menu>
       </Box>
@@ -79,7 +78,7 @@ const NavBar = () => {
           <CartWidget />
         </Link>
       </Box>
-    </Flex>
+    </Flex >
   )
 }
 
