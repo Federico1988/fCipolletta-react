@@ -50,19 +50,19 @@ const NavBar = () => {
             </MenuItem>
             <MenuItem
               fontSize='2xl'>
-              <Link to={`/category/1`}>
+              <Link to={`/category/${'cat1'}`}>
                 Partituras
               </Link>
             </MenuItem>
             <MenuItem
               fontSize='2xl'>
-              <Link to={`/category/2`}>
+              <Link to={`/category/${'cat2'}`}>
                 Audios
               </Link>
             </MenuItem>
             <MenuItem
               fontSize='2xl'>
-              <Link to={`/category/3`}>
+              <Link to={`/category/${'cat3'}`}>
                 Videos
               </Link>
             </MenuItem>
