@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 
 const Item = ({ name, description, price }) => {
     return (
-        <Card>
+        <Card maxW='sm' align='center' borderRadius='20px' borderWidth='1px' borderColor='gray.300' margin='10px'>
             <CardBody>
-                <Stack>
+                <Stack mt='6' spacing='3'> 
                     <p>Imagen</p>
                     <Heading>{name}</Heading>
                     <Text>
                         {description}
                     </Text>
-                    <Text>
+                    <Text color='blue.300' fontSize='2xl' fontWeight='bold'> 
                         ${price}
                     </Text>
                 </Stack>
@@ -27,8 +27,6 @@ const Item = ({ name, description, price }) => {
 
                 </ButtonGroup>
             </CardFooter>
-
-
         </Card>
     )
 }

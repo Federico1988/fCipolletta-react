@@ -23,7 +23,9 @@ const NavBar = () => {
         p='4'
         borderRadius='10px'
         bgGradient="linear(to-l, red.200, blue.200)">
-        <h1>CipoMusic</h1>
+        <Link to={"/"}>
+          <h1>CipoMusic</h1>
+        </Link>
       </Box>
       <Spacer />
       <Box>
