@@ -45,15 +45,22 @@ const NavBar = () => {
           <MenuList>
             <MenuItem
               fontSize='4xl'>
-              Partituras
+              <Link to={`/category/1`}>
+                Partituras
+              </Link>
             </MenuItem>
             <MenuItem
               fontSize='4xl'>
-              Audio
+
+              <Link to={`/category/2`}>
+                Audios
+              </Link>
             </MenuItem>
             <MenuItem
               fontSize='4xl'>
-              Videos
+              <Link to={`/category/3`}>
+                Videos
+              </Link>
             </MenuItem>
 
           </MenuList>

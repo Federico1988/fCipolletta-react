@@ -1,24 +1,28 @@
 import React from 'react'
 import Item from './Item'
+import { HStack, Wrap, WrapItem } from '@chakra-ui/react'
 
 const ItemList = ({ products }) => {
     return (
-        <div>
+        <Wrap spacing='20px'>
             {
                 products.map((prod) => {
                     return (
-                        <Item
-                            key={prod.id}
-                            category={prod.category}
-                            name={prod.name}
-                            description={prod.description}
-                            price={prod.price}
-                        />
+                        <WrapItem>
+                            <Item
+                                key={prod.id}
+                                id={prod.id}
+                                category={prod.category}
+                                name={prod.name}
+                                description={prod.description}
+                                price={prod.price}
+                            />
+                        </WrapItem>
                     )
                 })
             }
 
-        </div>
+        </Wrap>
     )
 }
 
