@@ -15,7 +15,7 @@ const ItemListContainer = () => {
   { id: "7", category: "cat3", name: "Otro super video", description: "Otro gran video, digno de ser visto", stock: 60, price: "2300" }
   ];
 
-  /*   const showProducts = new Promise((resolve, reject) => {
+     const showProducts = new Promise((resolve, reject) => {
       if (products.length > 0) {
         setTimeout(() => {
           resolve(products)
@@ -32,9 +32,8 @@ const ItemListContainer = () => {
     })
       .catch((error) => {
         console.log(error);
-      }) */
+      });
 
-  console.log(id);
   const filteredProduct = id ? products.filter((product) => product.category == id) : products;
   console.log(filteredProduct);
 
