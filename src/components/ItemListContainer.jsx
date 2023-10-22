@@ -38,10 +38,6 @@ const ItemListContainer = () => {
   const filteredProduct = id ? products.filter((product) => product.category == id) : products;
   console.log(filteredProduct);
 
-
-
-
-
   return (
     <>
       <Box p="1.5rem" align='left' spacing='10'>
