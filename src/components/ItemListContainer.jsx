@@ -1,4 +1,4 @@
-import { Center } from '@chakra-ui/react'
+import { Center, VStack, Box, Text } from '@chakra-ui/react'
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
@@ -40,13 +40,30 @@ const ItemListContainer = () => {
 
 
 
+
+
   return (
     <>
-      <Center p="1.5rem">
+      <Box p="1.5rem" align='left' spacing='10'>
+        <Text fontSize="30px" margin='20px'>Categoría: {setCategoryName(id)}</Text>
         <ItemList products={filteredProduct}></ItemList>
-      </Center>
+      </Box>
     </>
   )
+}
+
+function setCategoryName(categoryId) {
+  switch (categoryId) {
+    case undefined:
+      return "Todos";
+    case "1":
+      return "Partituras";
+    case "2":
+      return "Audios";
+    case "3":
+      return "Videos";
+
+  }
 }
 
 export default ItemListContainer
