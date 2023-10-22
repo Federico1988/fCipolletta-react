@@ -1,8 +1,7 @@
 import React from 'react'
-import LogoImg from '../img/logo.png'
-import CartImg from '../img/cart.png'
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom';
+import { MenuOptionGroup, MenuItemOption } from '@chakra-ui/react';
 
 
 import {
@@ -38,31 +37,35 @@ const NavBar = () => {
             bg={'gray.100'}
             _hover={{ bg: 'gray.400' }}
             _expanded={{ bg: 'blue.200' }}
-            fontSize='4xl'
-          >
-            Categorias
+            fontSize='4xl'  >
+            Categorías
           </MenuButton>
           <MenuList>
-            <MenuItem
-              fontSize='4xl'>
-              <Link to={`/category/1`}>
-                Partituras
-              </Link>
-            </MenuItem>
-            <MenuItem
-              fontSize='4xl'>
-
-              <Link to={`/category/2`}>
-                Audios
-              </Link>
-            </MenuItem>
-            <MenuItem
-              fontSize='4xl'>
-              <Link to={`/category/3`}>
-                Videos
-              </Link>
-            </MenuItem>
-
+            <MenuOptionGroup defaultValue='todos' type='radio'>
+              <MenuItemOption value='todos'
+                fontSize='4xl'>
+                <Link to={`/`}>
+                  Todos
+                </Link></MenuItemOption>
+              <MenuItemOption value='partituras'
+                fontSize='4xl'>
+                <Link to={`/category/1`}>
+                  Partituras
+                </Link>
+              </MenuItemOption>
+              <MenuItemOption value='audios'
+                fontSize='4xl'>
+                <Link to={`/category/2`}>
+                  Audios
+                </Link>
+              </MenuItemOption>
+              <MenuItemOption value='videos'
+                fontSize='4xl'>
+                <Link to={`/category/3`}>
+                  Videos
+                </Link>
+              </MenuItemOption>
+            </MenuOptionGroup>
           </MenuList>
         </Menu>
       </Box>
