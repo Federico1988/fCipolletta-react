@@ -14,7 +14,7 @@ const ItemDetail = ({ products }) => {
             {
                 filteredProduct.map((product) => {
                     return (
-                        <Card width='350px' height='400px' align='center' borderRadius='20px' borderWidth='1px' borderColor='gray.300' flex>
+                        <Card width='350px' height='400px' align='center' borderRadius='20px' borderWidth='1px' borderColor='gray.300' key={product.id}>
                             <CardBody>
                                 <Stack mt='6' spacing='3'
                                     align='stretch'>

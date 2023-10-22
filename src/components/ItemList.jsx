@@ -2,13 +2,13 @@ import React from 'react'
 import Item from './Item'
 import { HStack, Wrap, WrapItem } from '@chakra-ui/react'
 
-const ItemList = ({ products }) => {
+const ItemList = ({products }) => {
     return (
         <Wrap spacing='20px'>
             {
                 products.map((prod) => {
                     return (
-                        <WrapItem>
+                        <WrapItem key={prod.id}>
                             <Item
                                 key={prod.id}
                                 id={prod.id}
