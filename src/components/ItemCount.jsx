@@ -1,9 +1,11 @@
 import { Box, Button, Flex } from '@chakra-ui/react';
-import React, { useState } from 'react'
+import { useContext, useState } from 'react'
+import { CartContext } from '../context/ShoppingCartContext'
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ product }) => {
     const [count, setCount] = useState(0);
 
+    const { addToCart } = useContext(CartContext);
     return (
         <Flex>
             <Box>
@@ -12,10 +14,10 @@ const ItemCount = ({ stock }) => {
                 }}>
                     -
                 </Button>
-                <Button m={1} colorScheme={count !== 0 ? 'green' : 'gray'}>{count}</Button>
+                <Button onClick={() => addToCart(product, count)} m={1} colorScheme={count !== 0 ? 'green' : 'gray'}>{count}</Button>
 
                 <Button variant='outline' colorScheme='blue' m={1} onClick={() => {
-                    if (count < stock) setCount(count + 1)
+                    if (count < product.stock) setCount(count + 1)
                 }}>
                     +
                 </Button>

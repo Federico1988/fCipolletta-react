@@ -1,8 +1,8 @@
-import React from 'react'
+
+import {useContext, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Card, CardBody, Stack, VStack, Heading, Text, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
 import ItemCount from './ItemCount'
-
 
 const ItemDetail = ({ products }) => {
     const { id } = useParams();
@@ -32,8 +32,9 @@ const ItemDetail = ({ products }) => {
                                         ${product.price}
                                     </Text>
                                     <ButtonGroup spacing='2'>
-                                        <ItemCount stock={product.stock}></ItemCount>
+                                        <ItemCount product={product}></ItemCount>
                                     </ButtonGroup>
+                                    
                                 </VStack>
                             </CardFooter>
                         </Card>
