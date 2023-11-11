@@ -23,9 +23,7 @@ const CartItem = (item) => {
             <Divider />
             <CardFooter>
 
-                <Link to={`/`}>
                     <Button onClick={() => { removeItem(item); }} m={1} colorScheme={'red'}>Eliminar</Button>
-                </Link>
             </CardFooter>
         </Card>
     )

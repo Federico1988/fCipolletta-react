@@ -9,6 +9,7 @@ export const Cart = () => {
 
 
   const { cart } = useContext(CartContext);
+  console.log(cart);
 
   return (
     <Box p="1.5rem" align='left' spacing='10'>

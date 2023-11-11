@@ -5,8 +5,8 @@ import { CartContext } from '../context/ShoppingCartContext'
 
 const CartWidget = () => {
 
-  const{total}=useContext(CartContext);
-  
+  const{badge}=useContext(CartContext);
+
   return (
 
     <Flex>
@@ -20,7 +20,7 @@ const CartWidget = () => {
         <Badge 
         colorScheme='yellow'
         fontSize='1xl'
-        >8</Badge>
+        >{badge}</Badge>
       </Box>
     </Flex>
 

@@ -4,8 +4,8 @@ export const CartContext = createContext(null);
 
 export const CartContextProvider = ({ children }) => {
 
-    const cart = [];
-    const [cartList, setCartList] = useState(cart);
+    //const cart = [];
+    const [cart, setCart] = useState([]);
     const [badge, setBadge] = useState([0]);
     /* useEffect(() => {
          console.log(cart);
@@ -13,36 +13,45 @@ export const CartContextProvider = ({ children }) => {
 
     const addToCart = (item, qty) => {
         if (qty === 0) return;
-        if (cart.includes(item))
-            item.cantidad += qty;
-        else {
-            item.cantidad = qty;
-            //setCartList(prevState => [...prevState, { ...item, qty }]);
-            cart.push(item);
+
+        const existingItem = cart.find((cartItem) => cartItem.id === item.id);
+
+        if (existingItem) {
+            setCart((prevCart) =>
+                prevCart.map((cartItem) =>
+                    cartItem.id === item.id
+                        ? { ...cartItem, cantidad: cartItem.cantidad + qty }
+                        : cartItem
+                )
+            );
+        } else {
+            setCart((prevCart) => [...prevCart, { ...item, cantidad: qty }]);
         }
-        alert(`Se sumaron ${qty} unidades de  ${item.name}`);
+
+        setBadge((prevBadge) => prevBadge + qty);
+        //alert(`Se sumaron ${qty} unidades de  ${item.name}`);
 
     }
 
     const removeItem = (item) => {
         console.log("Remove item requested");
         //if (cart.includes(item)){
-        cart.pop(item);
+        setCart((prevCart) => prevCart.filter((cartItem) => cartItem.id !== item.id));
         alert(`Item ${item.name} eliminado del carrito`);
         //}
     }
 
     const removeAll = () => {
-        cart.clear();
-        alert('Carrito eliminado!');
+        setCart([]);
+        setBadge(0);
 
     }
 
     const isInCart = (itemId) => {
-        return cartList.find((cartItem) => cartItem.id === itemId);
+        return cart.find((cartItem) => cartItem.id === itemId);
     }
     return (
-        <CartContext.Provider value={{ cartList, setCartList, addToCart, removeItem, removeAll, isInCart, cart, badge, setBadge }}>
+        <CartContext.Provider value={{ cart, setCart, addToCart, removeItem, removeAll, isInCart, cart, badge, setBadge }}>
             {children}
         </CartContext.Provider>
     )
