@@ -17,10 +17,11 @@ const CartWidget = () => {
       </Box>
       <Divider />
       <Box>
-        <Badge 
-        colorScheme='yellow'
-        fontSize='1xl'
-        >{badge}</Badge>
+        {badge > 0 && (
+          <Badge colorScheme="yellow" fontSize="1xl">
+            {badge}
+          </Badge>
+        )}
       </Box>
     </Flex>
 
