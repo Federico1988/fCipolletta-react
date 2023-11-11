@@ -28,7 +28,7 @@ export const CartContextProvider = ({ children }) => {
             setCart((prevCart) => [...prevCart, { ...item, cantidad: qty }]);
         }
 
-        setBadge((prevBadge) => prevBadge + qty);
+        setBadge((prevBadge) => parseInt(prevBadge) + parseInt(qty));
         //alert(`Se sumaron ${qty} unidades de  ${item.name}`);
 
     }
@@ -37,6 +37,7 @@ export const CartContextProvider = ({ children }) => {
         console.log("Remove item requested");
         //if (cart.includes(item)){
         setCart((prevCart) => prevCart.filter((cartItem) => cartItem.id !== item.id));
+        setBadge((prevBadge) => parseInt(prevBadge) - item.cantidad);
         alert(`Item ${item.name} eliminado del carrito`);
         //}
     }
