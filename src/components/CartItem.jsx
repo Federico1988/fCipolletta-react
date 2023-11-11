@@ -1,13 +1,14 @@
 import React from 'react'
 import { useContext, useState } from 'react'
-import { Card, CardBody, Stack, VStack, Heading, Divider, CardFooter,Text, ButtonGroup, Button } from '@chakra-ui/react'
+import { Card, CardBody, Stack, VStack, Heading, Divider, CardFooter, Text, ButtonGroup, Button } from '@chakra-ui/react'
+import { Link } from 'react-router-dom';
 
 import { CartContext } from '../context/ShoppingCartContext'
 
 const CartItem = (item) => {
 
-    
-  const { removeItem } = useContext(CartContext);
+
+    const { removeItem } = useContext(CartContext);
 
     return (
         <Card width='350px' height='300px' align='center' borderRadius='20px' borderWidth='1px' borderColor='gray.300' flex>
@@ -21,7 +22,10 @@ const CartItem = (item) => {
             </CardBody>
             <Divider />
             <CardFooter>
-                <Button onClick={() => {removeItem(item);}} m={1} colorScheme={'red'}>Eliminar</Button>
+
+                <Link to={`/`}>
+                    <Button onClick={() => { removeItem(item); }} m={1} colorScheme={'red'}>Eliminar</Button>
+                </Link>
             </CardFooter>
         </Card>
     )
