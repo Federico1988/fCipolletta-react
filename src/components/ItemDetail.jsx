@@ -8,7 +8,7 @@ const ItemDetail = ({ products }) => {
     const { id } = useParams();
 
     const filteredProduct = products.filter((product) => product.id == id);
-    console.log(filteredProduct);
+    //console.log(filteredProduct);
     return (
         <>
             {

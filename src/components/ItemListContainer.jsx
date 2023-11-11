@@ -27,15 +27,15 @@ const ItemListContainer = () => {
   
     });
   
-    showProducts.then((result) => {
-      console.log(result)
-    })
-      .catch((error) => {
-        console.log(error);
-      });
+    //showProducts.then((result) => {
+    //  console.log(result)
+    //})
+    //  .catch((error) => {
+    //    console.log(error);
+    //  });
 
   const filteredProduct = id ? products.filter((product) => product.category == id) : products;
-  console.log(filteredProduct);
+  //console.log(filteredProduct);
 
   return (
     <>

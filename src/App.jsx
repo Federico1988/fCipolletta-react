@@ -3,11 +3,11 @@ import React from 'react';
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Cart } from './components/Cart';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
+import {Cart} from './components/Cart'
 import Collections from './components/Collections';
 import SendOrders from './components/SendOrders';
-import ShoppingCartProvider from './context/ShoppingCartContext'
+import ShoppingCartProvider, { CartContext } from './context/ShoppingCartContext'
 
 function App() {
   const greeting = "Bienvenidos al show!";

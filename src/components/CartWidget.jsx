@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Badge } from '@chakra-ui/react'
 import { Flex, Box, Divider } from '@chakra-ui/react'
+import { CartContext } from '../context/ShoppingCartContext'
 
 const CartWidget = () => {
+
+  const{total}=useContext(CartContext);
+  
   return (
 
     <Flex>
