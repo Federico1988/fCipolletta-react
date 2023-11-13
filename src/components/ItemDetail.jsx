@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom'
 import { Card, CardBody, Stack, VStack, Heading, Text, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
 import ItemCount from './ItemCount'
 
-const ItemDetail = ({ products }) => {
+const ItemDetail = ({ productos }) => {
     const { id } = useParams();
 
-    const filteredProduct = products.filter((product) => product.id == id);
+    const filteredProduct = productos.filter((product) => product.id == id);
     //console.log(filteredProduct);
     return (
         <>
