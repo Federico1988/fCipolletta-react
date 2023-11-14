@@ -6,15 +6,15 @@ import ItemDetail from './ItemDetail';
 export const ItemDetailContainer = () => {
 
   
-      const [productos, setProductos] = useState([]);
-      useEffect(() => {
-        const db = getFirestore();
-        const itemsCollection = collection(db, 'estudios');
-        getDocs(itemsCollection).then((snapshot) => {
-            const docs = snapshot.docs.map((doc) => doc.data());
-            setProductos(docs);
-        });
-    
+        const [productos, setProductos] = useState([]);
+        useEffect(() => {
+          const db = getFirestore();
+          const itemsCollection = collection(db, 'estudios');
+          getDocs(itemsCollection).then((snapshot) => {
+              const docs = snapshot.docs.map((doc) => doc.data());
+              setProductos(docs);
+          });
+      
     
     }, [])
     return (
