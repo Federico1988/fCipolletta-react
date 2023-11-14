@@ -6,14 +6,16 @@ import { Wrap, WrapItem, Box, Text } from '@chakra-ui/react'
 import CartItem from './CartItem'
 
 export const Cart = () => {
-
-
   const { cart } = useContext(CartContext);
-  console.log(cart);
 
   return (
     <Box p="1.5rem" align='left' spacing='10'>
-      <Text fontSize="30px" margin='20px'>Elementos del Carrito:</Text>
+      {cart.length === 0 ? (
+        <Text fontSize="30px" margin="20px">No hay elementos en el carrito.</Text>
+      ) : (
+        <Text fontSize="30px" margin="20px">Elementos del Carrito:</Text>
+      )}
+
       <Wrap spacing='20px'>
         {
           cart.map((prod) => {
