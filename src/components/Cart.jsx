@@ -9,7 +9,15 @@ import { collection, addDoc, getFirestore } from 'firebase/firestore';
 
 export const Cart = () => {
   const { cart,removeAll } = useContext(CartContext);
-
+  const totalCost = cart.reduce((total, item) => {
+    const itemPrice = parseFloat(item.price);
+    if (!isNaN(itemPrice)) {
+      return total + itemPrice * item.cantidad;
+    } else {
+      return total;
+    }
+  }, 0);
+  
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [idList, setIdList] = useState("");
@@ -60,7 +68,8 @@ export const Cart = () => {
             })
           }
         </Wrap>
-      </Box>
+        </Box>
+        <h1>Total de compra: ${totalCost}</h1>
       <div style={{ textAlign: 'center', margin: '50px' }}>
         <h1 style={{ marginBottom: '20px' }}>Formulario de Compra</h1>
         <form
