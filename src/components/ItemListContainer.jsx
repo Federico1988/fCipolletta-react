@@ -30,19 +30,6 @@ const ItemListContainer = () => {
         <Text fontSize="30px" margin='20px'>Categoría: {setCategoryName(id)}</Text>
         <ItemList products={filteredProduct}></ItemList>
       </Box>
-
-      <Box
-        position="fixed"
-        bottom="0"
-        right="0"
-        margin="10px"
-        bg='gray.300'
-        borderRadius='10px'
-        >
-        <Link to={"sendOrders"}>
-          <ContactWidget />
-        </Link>
-      </Box>
     </>
   )
 }
