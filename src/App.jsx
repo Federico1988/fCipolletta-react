@@ -5,9 +5,7 @@ import ItemListContainer from './components/ItemListContainer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
 import {Cart} from './components/Cart'
-import SendOrders from './components/SendOrders';
 import ShoppingCartProvider, { CartContext } from './context/ShoppingCartContext'
-import { ContactWidget } from './components/ContactWidget';
 
 function App() {
   const greeting = "Bienvenidos al show!";
@@ -20,7 +18,6 @@ function App() {
           <Route exact path='/category/:id' element={<ItemListContainer />} />
           <Route exact path='/cart' element={<Cart />} />
           <Route exact path='/product/:id' element={<ItemDetailContainer />} />
-          <Route exact path='/sendOrders' element={<SendOrders />} />
         </Routes>
       </ShoppingCartProvider>
     </BrowserRouter>

@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import { useParams, Link } from 'react-router-dom'
 import ItemList from './ItemList'
-import { ContactWidget } from './ContactWidget'
 
 const ItemListContainer = () => {
 

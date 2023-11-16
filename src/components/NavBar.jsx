@@ -14,7 +14,6 @@ import {
   Box,
   Spacer
 } from '@chakra-ui/react'
-import { ContactWidget } from './ContactWidget';
 
 const NavBar = () => {
 
@@ -77,20 +76,6 @@ const NavBar = () => {
         borderRadius='10px'>
         <Link to={"/cart"}>
           <CartWidget />
-        </Link>
-      </Box>
-      
-
-      <Box
-        position="fixed"
-        bottom="0"
-        right="0"
-        margin="10px"
-        bg='gray.300'
-        borderRadius='10px'
-        >
-        <Link to={"sendOrders"}>
-          <ContactWidget />
         </Link>
       </Box>
     </Flex >

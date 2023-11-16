@@ -31,7 +31,7 @@ const ItemDetail = ({ productos }) => {
                                     <Text color='blue.300' fontSize='2xl' fontWeight='bold'>
                                         ${product.price}
                                     </Text>
-                                    <ButtonGroup spacing='2'>
+                                    <ButtonGroup spacing='1'>
                                         <ItemCount product={product}></ItemCount>
                                     </ButtonGroup>
                                     
