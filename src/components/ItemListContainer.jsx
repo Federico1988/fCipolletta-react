@@ -6,7 +6,7 @@ import ItemList from './ItemList'
 
 const ItemListContainer = () => {
 
-  const { id } = useParams(); //Esto es category/:id
+  const { id } = useParams();
 
 
   const [productos, setProductos] = useState([]);

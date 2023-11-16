@@ -4,12 +4,8 @@ export const CartContext = createContext(null);
 
 export const CartContextProvider = ({ children }) => {
 
-    //const cart = [];
     const [cart, setCart] = useState([]);
     const [badge, setBadge] = useState([0]);
-    /* useEffect(() => {
-         console.log(cart);
-     }, [cart]);*/
 
     const addToCart = (item, qty) => {
         if (qty === 0) return;
@@ -29,17 +25,14 @@ export const CartContextProvider = ({ children }) => {
         }
 
         setBadge((prevBadge) => parseInt(prevBadge) + parseInt(qty));
-        //alert(`Se sumaron ${qty} unidades de  ${item.name}`);
 
     }
 
     const removeItem = (item) => {
         console.log("Remove item requested");
-        //if (cart.includes(item)){
         setCart((prevCart) => prevCart.filter((cartItem) => cartItem.id !== item.id));
         setBadge((prevBadge) => parseInt(prevBadge) - item.cantidad);
         alert(`Item ${item.name} eliminado del carrito`);
-        //}
     }
 
     const removeAll = () => {
